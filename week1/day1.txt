@@ -11,3 +11,15 @@ public int firstBadVersion(int n) {
     }
     return l;
 }
+
+/*
+when finding mid element:
+use low + (high-low)/2
+instead of (low+high)/2
+
+because (low+high) can overflow 
+eg: low=Integer.MAX_VALUE-2 and high=Integer.MAX_VALUE-1
+if we try to find mid using: mid=(low+high)/2 this will result in overflow as int limit exceed.
+But if i use, mid=low+(high-low)/2 then it will work perfectly
+
+*/
